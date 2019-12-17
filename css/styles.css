@@ -34,7 +34,7 @@ label{
     margin-bottom: 16px;
     float:left;
     width:50%;
-    vertical-align: bottom
+    
   }  
   
   input[type = text]{
@@ -45,8 +45,7 @@ label{
     margin-top: 6px;
     margin-bottom: 16px;
     float:left;
-    width:50%;
-    vertical-align: bottom    
+    width:50%;        
   }
 
   input[type=submit] {
@@ -56,5 +55,12 @@ label{
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin-left: 45%;
+    width: 25%;
+    margin-top: 30px;
     
+  }
+  button{
+    margin-top: 70px;
+    margin-left: 40%;
   }
