@@ -4,13 +4,57 @@ body{
     box-sizing: border-box;
 }
 .form{
-    border: 2px;
-    width:500px;
-    text-align:left;
-    margin-right:5px;
-    display: block;
+    width: 700px;
+    margin-left: 100px;    
+    border: 2px;  
     height: 350px;
-    border: 3px solid green;
+    border: 2px solid green;
     padding: 50px;
-    margin: 20px;
+    margin-top: 10%;
 }
+label{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    float:left;
+    width:50%;
+    background-color: #4CAF50;
+    
+  }
+
+  input[type=password ]{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    float:left;
+    width:50%;
+    vertical-align: bottom
+  }  
+  
+  input[type = text]{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    float:left;
+    width:50%;
+    vertical-align: bottom    
+  }
+
+  input[type=submit] {
+    background-color: blue;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+  }
