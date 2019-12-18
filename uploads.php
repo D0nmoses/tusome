@@ -1,4 +1,11 @@
 <?php
+ini_set('display_errors',1);
+ini_set('display_startup_errors',1);
+error_reporting(E_ALL);
+
+
+
+
 // Check if a file has been uploaded
 if(isset($_FILES['uploaded_file'])) {
     // Make sure the file was sent without errors
@@ -18,11 +25,11 @@ if(isset($_FILES['uploaded_file'])) {
  
         // Create the SQL query
         $query = "
-            INSERT INTO `file` (
-                `name`, `mime`, `size`, `data`, `created` ,`subject`, `year`
+            INSERT INTO `exam_info` (
+                `file_name`, `mime`, `size`, `data`, `created` ,`subject`
             )
             VALUES (
-                '{$name}', '{$mime}', {$size}, '{$data}', NOW() ,'{$subject}', '{$year}'
+                '{$name}', '{$mime}', {$size}, '{$data}', NOW() ,'{$subject}'
             )";
  
         // Execute the query
@@ -45,4 +52,3 @@ if(isset($_FILES['uploaded_file'])) {
     // Close the mysql connection
     $dbLink->close();
 }
-else {
