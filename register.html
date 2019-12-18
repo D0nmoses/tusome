@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,33 +15,41 @@
 
 
 </head>
+
 <body>
     <!-- start of container -->
     <div class="container">
         <div class="register_form">
-            <label for="fullname">Full Name</label>
-            <input type="text" id="fullname" name="fullname">
+            <form name="registration" action="registration.php" method="POST">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname">
 
-            <label for="email">Email Address</label> 
-            <input type="email" id="email" name="emailaddress">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="emailaddress">
 
-            <label for="telephone">Telephone</label>
-            <input type="text" id="tel" name="telephone">
+                <label for="telephone">Telephone</label>
+                <input type="text" id="tel" name="telephone">
 
-            <label for="username">User Name</label>
-            <input type="text" id="usrname" name="username">
+                <label for="username">User Name</label>
+                <input type="text" id="usrname" name="username">
 
-            <label for="password" >Password</label>
-            <input type="password" id="pass" name="password">
-            
-            <label for="confrim">Confrim The Password</label>
-            <input type="password" id="confrim" name="confrimpass">
+                <label for="password">Password</label>
+                <input type="password" id="pass" name="password">
 
-            <input type="submit" value="submit">
+                <label for="confrim">Confrim The Password</label>
+                <input type="password" id="confrim" name="confrimpass">
+
+                <input type="submit" name="submit" value="Submit" />
+            </form>
 
         </div>
 
     </div>
-    
+        <!-- js script file-->
+    <script src="js/jquery.js"> </script>
+    <script src="js/register.js"></script>
+
+
 </body>
+
 </html>
