@@ -1,20 +1,20 @@
-<?php 
-require_once "phpmysqlconnect.php"
-
-// Escape user inputs for security
-$full_name = mysqli_real_escape_string($conn, $_REQUEST['full_name']);
-$user_name = mysqli_real_escape_string($conn, $_REQUEST['user_name']);
-$email = mysqli_real_escape_string($conn, $_REQUEST['email']);
-$password = mysqli_real_escape_string($conn, $_REQUEST['password']);
-$telephone = mysqli_real_escape_string($conn, $_REQUEST['telephone'])
-// Attempt insert query execution
-$sql = "INSERT INTO userinfo (full_name, user_name, telephone, password, email) VALUES ('$full_name', '$user_name','$telephone''$password', '$email')";
-if(mysqli_query($conn, $sql)){
-    echo "Records added successfully.";
-} else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
+<?php
+$connection = mysql_connect("localhost", "root", ""); // Establishing Connection with Server
+$db = mysql_select_db("tusome", $connection); // Selecting Database from Server
+if(isset($_POST['submit'])){ // Fetching variables of the form which travels in URL
+$name = $_POST['name'];
+$username = $_POST['username']
+$email = $_POST['email'];
+$telephone = $_POST['telephone'];
+$password = $_POST['password'];
+if($name !=''||$email !=''){
+//Insert Query of SQL
+$query = mysql_query("insert into users(fullname,username,email,telephone,password) values ('$name','$username','$email', '$telephone', '$password')");
+echo "<br/><br/><span>Data Inserted successfully...!!</span>";
 }
- 
-// Close connection
-mysqli_close($conn);
+else{
+echo "<p>Insertion Failed <br/> Some Fields are Blank....!!</p>";
+}
+}
+mysql_close($connection); // Closing Connection with Server
 ?>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <!-- custom css -->
+    <link href="css/styles_login.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- this is the container section -->
+    <div class="container">
+        <!-- login page -->
+        <div class="form">
+            <form name="login" action="login.php" method="POST">
+                <label for="username">USER NAME</label>
+                <input type="text" id="usrname" name="username">
+                <label for="password">PASSWORD</label>
+                <input type="password" id="password" name="password">
+
+                <input type="submit" value="Login" id="submit"/>
+
+                <button><a href="register.html">Do you want to register</a></button>
+            </form>
+        </div>
+    </div>
+
+    <!--java script -->
+    <script src="js/jquery.js"></script>
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>
