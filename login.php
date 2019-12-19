@@ -33,7 +33,7 @@ if(!empty($_POST['username']) && !empty($_POST['password'])) {
     $_SESSION['sess_user']=$user;  
   
     /* Redirect browser */  
-    echo"sesssion start";//header("Location: member.php");  
+    header("Location: index.html");  
     }  
     } else {  
     echo "Invalid username or password!";  
